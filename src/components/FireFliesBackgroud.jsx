@@ -29,7 +29,7 @@ const FireFliesBackgroud = () => {
       {
         fireFlies.map((fireFly) => {
           return <div key={fireFly.id}
-          className='absolute rounded-full bg-accent w-[20px] h-[20px]'
+          className='absolute rounded-full w-[10px] h-[10px] bg-firefly-radial'
           style={{
             top: fireFly.top,
             left: fireFly.left,
