@@ -42,6 +42,9 @@ const AboutDetails = () => {
         <ItemLayout className='col-span-8 p-0'>
           <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api?username=rashidilawal&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="codebucks" loading="lazy"/>
         </ItemLayout>
+        <ItemLayout className='col-span-full'>
+          <img className="w-full h-auto" src="https://skillicons.dev/icons?i=js,react,redux,ts,sass,tailwind,html,css,bootstrap,materialui,mongodb,nodejs,nextjs,express,ember,postman,php,laravel,py,pug,svg,threejs,git,github,bitbucket,gitlab,githubactions,notion,ai,vscode,npm,codepen,powershell,vite,vitest,webpack,stackoverflow,linkedin,gmail,twitter,discord" alt="codebucks" loading="lazy"/>
+        </ItemLayout>
       </div>
     </section>
   );
