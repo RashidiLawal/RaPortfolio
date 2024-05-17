@@ -2,6 +2,8 @@ import Image from "next/image";
 import bg from '../../../../public/background/about-background.png'
 import RenderModel from "@/components/RenderModel";
 import HatModel from "@/components/models/HatModel";
+import AboutDetails from "@/components/about";
+// import { Flashlight } from "lucide-react";
 
 
 export default function Home() {
@@ -15,15 +17,17 @@ export default function Home() {
       </RenderModel>
      </div>
      <div className="relative w-full h-screen flex flex-col items-center justify-center">
-     <div className="absolute flex flex-col items-center text-center top-[60%] left-1/2 -translate-x-1/2">
-      <h1>
+     <div className="absolute flex flex-col items-center text-center top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2">
+      <h1 className="font-bold text-6xl text-accent">
       Rashidi Lawal
       </h1>
-      <p>
-        Contact Me!
+      {/* <Flashlight className="w-full h-auto bg-green-400" strokeWidth={1.5}/> */}
+      <p className="font-light text-foreground text-lg">
+        Light-up the world!
       </p>
      </div>
      </div>
+     <AboutDetails />
     </>
   );
 }
