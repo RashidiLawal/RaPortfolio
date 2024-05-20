@@ -39,7 +39,7 @@ const AboutDetails = () => {
         <ItemLayout className='col-span-4 p-0'>
           <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api/top-langs?username=rashidilawal&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="languages" loading="lazy"/>
         </ItemLayout>
-        <ItemLayout className='col-span-8 p-0'>
+        <ItemLayout className='col-span-8 !p-0'>
           <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api?username=rashidilawal&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="Github stats" loading="lazy"/>
         </ItemLayout>
         <ItemLayout className='col-span-full'>
@@ -50,6 +50,9 @@ const AboutDetails = () => {
        <img className="w-full h-auto" src="https://github-readme-streak-stats.herokuapp.com?user=rashidilawal&theme=dark&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&ring=FEFE5B&background=EB545400&currStreakLabel=FEFE5B" alt="GitHub Streak" loading="lazy"/>
         </ItemLayout>
 
+        <ItemLayout className='col-span-8 !p-0'>
+          <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api/pin/?username=rashidilawal&repo=RaPortfolio&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="Github stats" loading="lazy"/>
+        </ItemLayout>
       </div>
     </section>
   );
