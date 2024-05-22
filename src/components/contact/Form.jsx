@@ -1,6 +1,8 @@
 "use client";
+import { EmailJSResponseStatus } from "@emailjs/browser";
 import React from "react";
 import { useForm } from "react-hook-form";
+import emailjs from '@emailjs/browser';
 
 export default function Form() {
   const {
@@ -8,7 +10,37 @@ export default function Form() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+
+  const sendEmail = (params) => {
+    
+EmailJSResponseStatus
+    emailjs
+      .send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, params, {
+        publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+        limitRate:{
+          throttle: 5000 // you can not send more than one email per second
+        }
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+  const onSubmit = (data) => {
+    const templateParams = {
+      to_name: "Rashidi",
+      from_name: data.name,
+      reply_to: data.email,
+      message: data.message
+    }
+    sendEmail(templateParams)
+  };
   console.log(errors);
 
   return (
@@ -19,12 +51,12 @@ export default function Form() {
       <input
         type="text"
         placeholder="Name"
-        {...register("Name", { required: true })}
+        {...register("name", { required: true })}
         className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:right-2 focus:ring-accent/50 custom-bg"
       />
       <input
         type="email"
-        placeholder="email"
+        placeholder="Email"
         {...register("email", { required: true })}
         className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:right-2 focus:ring-accent/50 custom-bg"
       />
