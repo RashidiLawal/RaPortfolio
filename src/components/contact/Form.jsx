@@ -51,7 +51,10 @@ EmailJSResponseStatus
       <input
         type="text"
         placeholder="Name"
-        {...register("name", { required: true })}
+        {...register("name", { required: 'This field is required!', minLenght: {
+          value: 3,
+          message: "name should atleast be 3 characters long"
+        } })}
         className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:right-2 focus:ring-accent/50 custom-bg"
       />
       <input
