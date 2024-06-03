@@ -1,7 +1,11 @@
 import React from "react";
 import ItemLayout from "./itemLayout";
 
+
+
+
 const AboutDetails = () => {
+  
   return (
     <section className="py-20 w-full">
       <div className="grid grid-cols-12 gap-4 xs:gap-6 md:gap-8 w-full">

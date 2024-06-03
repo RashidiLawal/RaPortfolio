@@ -3,13 +3,14 @@ import React from 'react'
 import clsx from "clsx";
 import { motion } from "framer-motion";
 
-const ItemLayout = ({ children, className }) => {
+const ItemLayout = ({ children, className, useAnimate, animate,  }) => {
     return (
       <motion.div
+    
       initial={{scale:0}}
       whileInView={{scale:1}}
       transition={{duration:0.5}}
-      viewport={{once: true}}
+      viewport={{once:true}}
         className={clsx(
           "custom-bg p-6 sm:p-8 rounded-xl flex items-center justify-center space-y-8",
           className
