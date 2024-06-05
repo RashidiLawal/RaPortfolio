@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
         {children}
         <FireFliesBackgroud />
         <Sound />
+        <div id="my-modal"/>
         </body>
     </html>
   );

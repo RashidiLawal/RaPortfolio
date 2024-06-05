@@ -2,6 +2,24 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Volume2, VolumeX } from "lucide-react";
+import { createPortal } from "react-dom";
+
+const modal = ({onClose, toggle}) => {
+    return createPortal(
+        <div className="fixed inset-0 bg-background/60 backdrop-blur-sm flex items-center justify-center">
+            <div className="bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] py-8 px-6 xs:px-10 sm:px-16 rounded shadow-glass-inset text-center space-y-8" >
+            <p className="font-light">
+            Do you like to hear the background sound?
+            </p>
+            <div className="flex items-center justify-center space-x-4">
+            <button className="px-4 py-2 border border-accent/30 border-solid hover:shadow-glass-sm rounded">Yes</button>
+            <button className="px-4 py-2 border border-accent/30 border-solid hover:shadow-glass-sm rounded">No</button>
+            </div>
+            </div>
+        </div>,
+        document.getElementById("my-modal")
+    )
+}
 
 const Sound = () => {
     const [isPlaying, setIsPlaying] = useState(false);
