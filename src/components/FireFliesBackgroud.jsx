@@ -25,11 +25,11 @@ const FireFliesBackgroud = () => {
   }, []);
 
   return (
-    <div className='fixed top-0 left-0 w-full h-full -z-10 overflow-hidden'>
+    <div className="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden" suppressHydrationWarning={true}>
       {
         fireFlies.map((fireFly) => {
           return <div key={fireFly.id}
-          className='absolute rounded-full w-[10px] h-[10px] bg-firefly-radial'
+          className="absolute rounded-full w-[10px] h-[10px] bg-firefly-radial"
           style={{
             top: fireFly.top,
             left: fireFly.left,
